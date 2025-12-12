@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>TypeDash</h1>
+            <p>Test your speed and accuracy</p>
+        </header>
+
+        <div class="stats-bar">
+            <div class="stat-box">
+                <span class="label">Time</span>
+                <span class="value" id="timer">60s</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">WPM</span>
+                <span class="value" id="wpm">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">Accuracy</span>
+                <span class="value" id="accuracy">100%</span>
+            </div>
+        </div>
+
+        <div class="typing-area-wrapper">
+            <input type="text" id="input-field" autocomplete="off">
+            <div class="typing-text" id="typing-text">
+                </div>
+            <button id="restart-btn">Restart Test</button>
+        </div>
+
+        <div class="history-section">
+            <h2>Previous Attempts</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>WPM</th>
+                        <th>Accuracy</th>
+                    </tr>
+                </thead>
+                <tbody id="history-list">
+                    </tbody>
+            </table>
+            <button id="clear-history" class="secondary-btn">Clear History</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
