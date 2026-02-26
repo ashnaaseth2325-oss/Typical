@@ -50,7 +50,7 @@ header p {
     color: var(--text-sub);
 }
 
-/* Stats Bar */
+
 .stats-bar {
     display: flex;
     justify-content: space-between;
@@ -105,14 +105,14 @@ header p {
     background: #fff;
 }
 
-/* Input is hidden but active */
+
 #input-field {
     position: absolute;
     z-index: -999;
     opacity: 0;
 }
 
-/* Character Styling */
+
 .typing-text span.correct {
     color: var(--success);
 }
@@ -133,7 +133,7 @@ header p {
     50% { border-color: transparent; }
 }
 
-/* Buttons */
+
 button {
     display: block;
     margin: 1.5rem auto 0;
@@ -197,4 +197,5 @@ th {
 td {
     font-family: var(--font-mono);
     color: var(--text-main);
+
 }
