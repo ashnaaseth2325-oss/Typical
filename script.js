@@ -14,7 +14,7 @@ let charIndex = 0;
 let mistakes = 0;
 let isTyping = false;
 
-// Sample paragraphs
+
 const paragraphs = [
     "The quick brown fox jumps over the lazy dog. Programming is the art of telling another human what one wants the computer to do.",
     "Success is not final, failure is not fatal: it is the courage to continue that counts. Believe you can and you're halfway there.",
@@ -31,7 +31,7 @@ function loadParagraph() {
     });
     typingText.querySelectorAll("span")[0].classList.add("active");
     
-    // Focus input on load so user can start typing immediately
+   
     document.addEventListener("keydown", () => inputField.focus());
     typingText.addEventListener("click", () => inputField.focus());
 }
@@ -46,7 +46,7 @@ function initTyping() {
             isTyping = true;
         }
 
-        if (typedChar == null) { // Backspace
+        if (typedChar == null) { 
             if (charIndex > 0) {
                 charIndex--;
                 if (characters[charIndex].classList.contains("incorrect")) {
@@ -69,7 +69,7 @@ function initTyping() {
             characters[charIndex].classList.add("active");
         }
 
-        // Stats Calculation
+     
         let wpm = Math.round(((charIndex - mistakes) / 5) / (maxTime - timeLeft) * 60);
         wpm = wpm < 0 || !wpm || wpm === Infinity ? 0 : wpm;
         
@@ -100,7 +100,7 @@ function initTimer() {
 }
 
 function saveResult() {
-    // Prevent saving if no characters were typed
+    
     if(charIndex === 0) return;
 
     const result = {
@@ -148,4 +148,5 @@ loadParagraph();
 renderHistory();
 inputField.addEventListener("input", initTyping);
 restartBtn.addEventListener("click", resetTest);
+
 clearHistoryBtn.addEventListener("click", clearHistory);
